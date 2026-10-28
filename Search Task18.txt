@@ -1,0 +1,47 @@
+1. Difference Between Abstract Class and Interface
+Abstract Class:
+- It is a class that cannot be instantiated directly.
+- It can contain both abstract methods (without a body) and regular methods (with a body).
+- It can have properties and a constructor.
+- A class can extend only one abstract class.
+- It uses the abstract keyword.
+Interface:
+- It defines methods that implementing classes must provide.
+- Its methods are usually declared without a body.
+- It cannot be instantiated directly.
+- A class can implement multiple interfaces.
+- It uses the interface keyword.
+/////////////////////////////////////////////////////////////////
+Example in PHP:
+abstract class Animal {
+    abstract public function makeSound();
+}
+
+interface CanRun {
+    public function run();
+}
+////////////////////////////////////////////////////////////////
+
+2. Polymorphism
+Polymorphism means "many forms." It allows the same method to behave differently depending on the object that uses it.
+- Different classes can have a method with the same name.
+- Each class can provide its own implementation of that method.
+- It makes code more flexible and easier to maintain.
+
+///////////////////////////////////////////////////////////
+
+Example in PHP:
+class Dog {
+    public function makeSound() {
+        echo "Bark";
+    }
+}
+
+class Cat {
+    public function makeSound() {
+        echo "Meow";
+    }
+}
+
+
+Both classes have the same method makeSound(), but each produces a different result. This is called Polymorphism.
